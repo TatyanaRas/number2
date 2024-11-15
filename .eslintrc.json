@@ -1,0 +1,56 @@
+{
+  "env": {
+    "browser": true,
+    "es2021": true,
+    "node": true
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin: react/recommended",
+    "plugin:react/jsx-runtime",
+    "plugin:react-hooks/recommended",
+    "plugin:import/recommended",
+    "prettier"
+  ],
+
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "esmaVersion": "latest",//12,
+    "sourceType": "module"
+  },
+  "plugins": ["react"],
+  "rules": {
+      "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+       
+       "arrow-parens": ["error", "as-needed"],
+      "object-curly-spacing": ["error", "always"],
+      "array-bracket-spacing": ["error", "never"],
+      "quote-props": ["error", "as-needed"],
+      "semi": ["error", "always"], // точка с запятой в конце оператора
+      "quotes": ["error", "single"],
+      "linebreak-style": ["error", "unix"],
+      "indent": ["error", 4, { "SwitchCase": 1 }],
+      "no-trailing-spaces": "error",
+      "no-tabs": "error",
+      "no-extra-semi": "error", // запрет лишних точек с запятой — let x = 5;;
+      "comma-dangle": [
+          "error",
+          {
+              "arrays": "always-multiline",
+              "objects": "always-multiline",
+              "imports": "never",
+              "exports": "never",
+              "functions": "never"
+          }
+      ],
+      "brace-style": ["error", "1tbs"],
+      "keyword-spacing": "error",
+      "no-multi-spaces": "off",
+      "eqeqeq": "error",
+      "camelcase": "error",
+      "max-len": ["error", 100],
+      "no-multiple-empty-lines": "error"
+  }
+}
